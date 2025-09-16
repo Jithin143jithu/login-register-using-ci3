@@ -55,7 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 // application/config/routes.php
 $route['default_controller'] = 'auth';
 $route['auth/login_ajax'] = 'auth/login_ajax';
-// $route['auth/register_ajax'] = 'auth/register_ajax';
-// $route['auth/forgot_ajax'] = 'auth/forgot_ajax';
+$route['users'] = 'Users/index';
+$route['users/add'] = 'Users/userAdd';
 $route['dashboard'] = 'dashboard/index';
 $route['logout'] = 'auth/logout';
