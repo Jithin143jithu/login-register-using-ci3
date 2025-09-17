@@ -20,6 +20,11 @@ class BaseController extends CI_Controller{
         // Load User model
         $this->load->model('User_model');
 
+         // Skip auth check for AJAX requests (handled separately in controllers)
+        if ($this->input->is_ajax_request()) {
+            return; // 🚀 stop here, don’t do global checks
+        }
+        
         // print_r($this->session->userdata());
         $user_id  = $this->session->userdata('user_id');
         if (!$user_id ) {
