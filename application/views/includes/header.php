@@ -11,6 +11,11 @@
   <link href="<?php echo base_url('assets/font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet" />
   <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/AdminLTE.min.css'); ?>">
   <link href="<?php echo base_url(); ?>assets/dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
+  <?php if (isset($styles) && is_array($styles)): ?>
+    <?php foreach ($styles as $style): ?>
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url($style); ?>" />
+    <?php endforeach; ?>
+<?php endif; ?>
 </head>
 <body class="skin-blue sidebar-mini">
   
