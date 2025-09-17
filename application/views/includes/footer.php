@@ -7,7 +7,8 @@
 <script src="<?php echo base_url(); ?>assets/js/jQuery-2.1.4.min.js"></script>
 <script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js'); ?>"></script>
 <script src="<?php echo base_url(); ?>assets/dist/js/app.min.js" type="text/javascript"></script>
-
+<script src="<?php echo base_url(); ?>assets/js/jquery.validate.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/js/validation.js" type="text/javascript"></script>
  <!-- Page-specific scripts -->
 <?php if (!empty($scripts)): ?>
     <?php foreach ($scripts as $script): ?>
@@ -30,8 +31,23 @@
                 $('ul.sidebar-menu li').removeClass('active');
             }
         });
+        
     </script>
-
-    
+    <script type="text/javascript">
+        var baseURL = "<?php echo base_url(); ?>";
+    </script>
+    <style>
+        input.error {
+            color: inherit !important;  /* stop red text inside input */
+        }
+    	.error{
+    		color:red;
+    		font-weight: normal;
+    	}
+        .deleted-user {
+            background-color: #f2dede; /* light red */
+            color: #a94442; /* dark red text */
+        }
+    </style>
 </body>
 </html>
