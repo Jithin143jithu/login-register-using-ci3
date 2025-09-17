@@ -47,7 +47,7 @@ class Auth extends CI_Controller {
         $sessionData = [
             'user_id'     => $user->id,
             'role_id'     => $user->role_id,
-            'name'        => $user->name,
+            'name'        => $user->first_name.' '.$user->last_name,
             'isLoggedIn'  => true,
             'last_activity' => time(),
             'permissions' => $permissions
