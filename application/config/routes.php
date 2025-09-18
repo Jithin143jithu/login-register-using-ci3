@@ -62,5 +62,12 @@ $route['users/add'] = 'Users/add';
 $route['addNewUser'] = 'Users/addNewUser';
 $route['deleteUser'] = 'Users/deleteUser';
 
+/// Users routes
+$route['roles'] = 'Roles/index';
+// $route['users/add'] = 'Users/add';
+// $route['addNewUser'] = 'Users/addNewUser';
+// $route['deleteUser'] = 'Users/deleteUser';
+
+
 $route['dashboard'] = 'dashboard/index';
 $route['logout'] = 'auth/logout';
